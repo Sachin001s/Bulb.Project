@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+
+</head>
+<body>
+    <img id="bulbimg" src="images/bulboff.png" alt="bulb off">
+    <br>&emsp;&emsp;&emsp;&emsp;&emsp;
+    <button id="btn1">Switch on</button>
+    <!-- &emsp;&emsp;
+    <button id="btn2">Switch off</button> -->
+
+
+
+    <script>
+
+        const btn1 = document.querySelector('#btn1');
+        // const btn2 = document.querySelector('#btn2');
+        const bulbimg = document.querySelector('#bulbimg');
+
+        btn1.addEventListener('click',()=>
+        {
+            if(bulbimg.src.match('off'))
+            {
+                bulbimg.src = "images/bulbon.png";
+                btn1.innerHTML='Switch off'
+            }
+            else
+            {
+                bulbimg.src = "images/bulboff.png";
+                btn1.innerHTML='Switch on'
+            }
+           
+        });
+
+        // btn2.addEventListener('click',(event)=>
+        // {
+        //     bulbimg.src = "images/bulboff.png";
+        // });
+
+    </script>
+</body>
+</html>
